@@ -29,11 +29,14 @@ public class ToDoListItem {
     }
 
 
+public void printTask(){
 
+    System.out.println( "The description = " + description + "the status "+ complete);
+}
 
     @Override
     public String toString() {
-        return "Description :'" + description + '\'' +
-                ", complete? :" + complete;
+        return "Description : " + description +
+                ". Status of task : " + complete;
     }
 }
