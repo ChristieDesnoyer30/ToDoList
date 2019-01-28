@@ -45,7 +45,7 @@ public class ToDoListDemo {
 
                 toDoList.addToAttendees(toDoItem);
 
-                toDoList.printAttendeesList();
+                toDoList.printList(userChoice);
 
         }
 

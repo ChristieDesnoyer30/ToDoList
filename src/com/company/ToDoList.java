@@ -9,27 +9,63 @@ public class ToDoList {
     private ArrayList<ToDoListItem> fyreFestWorkers = new ArrayList<>();
 
 
-    public void addToAttendees(ToDoListItem item){
+    public void addToAttendees(ToDoListItem item) {
 
         fyreFestAttendees.add(item);
 
     }
 
+    public void addToTalen(ToDoListItem item) {
 
-    public void printAttendeesList(){
+        fyreFestTalent.add(item);
 
-        int count = 1;
+    }
 
-        for(ToDoListItem items: fyreFestAttendees){
+    public void addToWorkers(ToDoListItem item) {
 
-            System.out.print(count + ". ");
+        fyreFestWorkers.add(item);
 
-           System.out.println(items);
-
-            count++;
-        }
     }
 
 
+    public void printList(int userChoice) {
+
+        int count = 1;
+
+        if (userChoice == 1) {
+            for (ToDoListItem items : fyreFestAttendees) {
+
+                System.out.print(count + ". ");
+
+                System.out.println(items);
+
+                count++;
+            }
+        } else if (userChoice == 2) {
+
+            for (ToDoListItem items : fyreFestTalent) {
+
+                System.out.print(count + ". ");
+
+                System.out.println(items);
+
+                count++;
+
+            }
+        } else if (userChoice == 3) {
+
+            for (ToDoListItem items : fyreFestWorkers) {
+
+                System.out.print(count + ". ");
+
+                System.out.println(items);
+
+                count++;
+            }
+
+        }
+
+
+    }
 
 }
