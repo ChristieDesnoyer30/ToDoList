@@ -4,6 +4,9 @@ public class ToDoListItem {
     private String description;
     private String complete;
 
+    public ToDoListItem() {
+    }
+
     public ToDoListItem(String description, String complete) {
         this.description = description;
         this.complete = complete;
@@ -30,8 +33,7 @@ public class ToDoListItem {
 
     @Override
     public String toString() {
-        return "Your to do list item: " +
-                "description :'" + description + '\'' +
+        return "Description :'" + description + '\'' +
                 ", complete? :" + complete;
     }
 }
