@@ -33,6 +33,8 @@ public class ToDoListDemo {
 
                 case 1:
 
+                    System.out.println( "Okay, let's add to the Attendees list. ");
+
                     ToDoListItem td = toDoList.getTaskInformation();
 
                     toDoList.addToAttendees(td);
@@ -44,6 +46,7 @@ public class ToDoListDemo {
 
                 case 2:
 
+                    System.out.println( "Okay, let's add to the Talent list. ");
 
                     ToDoListItem td2 = toDoList.getTaskInformation();
 
@@ -55,6 +58,7 @@ public class ToDoListDemo {
 
                 case 3:
 
+                    System.out.println( "Okay, let's add to the Worker's list. ");
 
                     ToDoListItem td3 = toDoList.getTaskInformation();
 
@@ -87,7 +91,18 @@ public class ToDoListDemo {
         }while (addMore);
 
 
-        System.out.println("Thank you for using the program. ");
+        System.out.println("Here are your lists:");
+        toDoList.printList(1);
+        System.out.println( " ");
+        toDoList.printList(2);
+        System.out.println( " ");
+        toDoList.printList(3);
+
+
+
+
+
+
     }
 
 

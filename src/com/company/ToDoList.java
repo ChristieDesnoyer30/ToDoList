@@ -34,7 +34,7 @@ public class ToDoList {
         int count = 1;
 
         if (userChoice == 1) {
-
+            System.out.println( "Fyre Fest Attendees- To Do List: ");
             for (ToDoListItem items : fyreFestAttendees) {
 
                 System.out.print(count + ". ");
@@ -45,8 +45,9 @@ public class ToDoList {
             }
 
         } else if (userChoice == 2) {
-
+            System.out.println( "Fyre Fest Talent- To Do List: ");
             for (ToDoListItem items : fyreFestTalent) {
+
 
                 System.out.print(count + ". ");
 
@@ -57,6 +58,8 @@ public class ToDoList {
             }
 
         } else if (userChoice == 3) {
+
+            System.out.println( "Fyre Fest Workers- To Do List: ");
 
             for (ToDoListItem items : fyreFestWorkers) {
 

@@ -31,7 +31,7 @@ public class ToDoListItem {
 
 public void printTask(){
 
-    System.out.println( "The description = " + description + "the status "+ complete);
+    System.out.println( "Your task : " + description + ". Status : "+ complete);
 }
 
     @Override
