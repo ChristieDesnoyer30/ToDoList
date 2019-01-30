@@ -34,7 +34,7 @@ public class ToDoList {
         int count = 1;
 
         if (userChoice == 1) {
-            System.out.println( "Fyre Fest Attendees- To Do List: ");
+            System.out.println("Fyre Fest Attendees- To Do List: ");
             for (ToDoListItem items : fyreFestAttendees) {
 
                 System.out.print(count + ". ");
@@ -45,7 +45,7 @@ public class ToDoList {
             }
 
         } else if (userChoice == 2) {
-            System.out.println( "Fyre Fest Talent- To Do List: ");
+            System.out.println("Fyre Fest Talent- To Do List: ");
             for (ToDoListItem items : fyreFestTalent) {
 
 
@@ -59,7 +59,7 @@ public class ToDoList {
 
         } else if (userChoice == 3) {
 
-            System.out.println( "Fyre Fest Workers- To Do List: ");
+            System.out.println("Fyre Fest Workers- To Do List: ");
 
             for (ToDoListItem items : fyreFestWorkers) {
 
@@ -75,7 +75,7 @@ public class ToDoList {
 
     }
 
-    public ToDoListItem getTaskInformation (){
+    public ToDoListItem getTaskInformation() {
 
         ToDoListItem td = new ToDoListItem();
         Scanner scan = new Scanner(System.in);
@@ -88,12 +88,58 @@ public class ToDoList {
 
         String taskComplete = scan.nextLine();
 
-       td.setDescription(taskDescription);
+        td.setDescription(taskDescription);
 
         td.setComplete(taskComplete);
 
 
         return td;
     }
+
+    public void updateListItems(int userChoice) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What item would you like to update? ");
+
+        int listItem = scan.nextInt();
+
+
+        listItem -= 1;
+
+        if (userChoice == 1) {
+            System.out.println("What is the status of the task? ");
+            scan.nextLine();
+            String taskComplete = scan.nextLine();
+
+            fyreFestAttendees.get(listItem).setComplete(taskComplete);
+
+        } else if (userChoice == 2) {
+            System.out.println("What is the status of the task? ");
+
+            String taskComplete = scan.nextLine();
+
+            fyreFestTalent.get(listItem).setComplete(taskComplete);
+
+        } else {
+            System.out.println("What is the status of the task? ");
+
+            String taskComplete = scan.nextLine();
+
+            fyreFestWorkers.get(listItem).setComplete(taskComplete);
+
+        }
+
+    }
+
+    public void printAllLists() {
+
+        printList(1);
+
+        printList(2);
+
+        printList(3);
+
+
+    }
+
 
 }

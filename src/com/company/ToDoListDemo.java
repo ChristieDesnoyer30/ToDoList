@@ -16,14 +16,15 @@ public class ToDoListDemo {
 
         ToDoList toDoList = new ToDoList();
 
+        System.out.println( "\"Welcome to the Fyre Fest Task Manager. \nThe event is in less than 14 days away, there is still much to do. " +
+                "\nThis app has three lists to help get things squared away.");
+
         do {
-            System.out.println("Welcome to the Fyre Fest Task Manager. \nThe event is in less than 14 days away," +
-                    "there is still much to do. \nThis app has three lists to help get things squared away. " +
-                    "\nPress 1 to access the list that keeps task that have to do with our festivals attendees, lodging, food etc. " +
+            System.out.println("\nPress 1 to access the list that keeps task that have to do with our festivals attendees, lodging, food etc. " +
                     "\nPress 2 to access the list that keeps tracks of tasks for our musical acts and influencers" +
                     "\nPress 3 to access the list that keeps record of tasks for the organizers and workers." +
                     "\nPress 4 to update items in a list. " +
-                    "\nPress 5 to exit the program."
+                    "\nPress 5 to see all lists. \nPress 6 to exit."
             );
 
 
@@ -71,12 +72,21 @@ public class ToDoListDemo {
                     break;
 
                 case 4:
-                    System.out.println("Which list would you like to update?");
+                    System.out.println("Which list would you like to update? \n 1 for Attendees. \n 2. for Talent. \n 3. for Workers ");
+                    int choice = scan.nextInt();
+                    toDoList.printList(choice);
+                    toDoList.updateListItems(choice);
+
+
 
                     break;
 
-
                 case 5:
+
+                    toDoList.printAllLists();
+                    break;
+
+                case 6:
                     addMore = false;
                     break;
 
@@ -103,13 +113,9 @@ public class ToDoListDemo {
         } while (addMore);
 
 
-        System.out.println("Here are your lists:");
-        toDoList.printList(1);
-        System.out.println(" ");
-        toDoList.printList(2);
-        System.out.println(" ");
-        toDoList.printList(3);
-
+//        System.out.println("Here are your lists:");
+//        toDoList.printAllLists();
+//
 
     }
 
